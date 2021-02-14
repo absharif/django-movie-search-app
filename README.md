@@ -8,7 +8,7 @@ Fetures:
   4. Search Movie with title, year, gener
   5. Movie Details
   
- -- Installation:
+# Installation:
  
  1. Colne this directory
     
