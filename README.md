@@ -13,7 +13,7 @@ Fetures:
  1. Colne this directory
     
  2. Create a Python 3.6 virtualenv
-      vartualenv -p python3.6 env
+      virtualenv -p python3.6 env
  
  3. Install dependencies
       pip install -r requirements.txt
