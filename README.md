@@ -13,10 +13,10 @@ Fetures:
  1. Colne this directory
     
  2. Create a Python 3.6 virtualenv
-      virtualenv -p python3.6 env
+      <code>virtualenv -p python3.6 env</code>
  
  3. Install dependencies
-      pip install -r requirements.txt
+      <code>pip install -r requirements.txt</code>
       
  4. Run the surver
-      python manage.py runserver
+      <code>python manage.py runserver</code>
