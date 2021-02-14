@@ -1,0 +1,58 @@
+{% extends "base/base.html" %} {% block content %}
+<div class="row">
+  <div class="col-md-3">
+    {% if movie.poster %}
+    <img src="{{ movie.poster }}" , width="100%" />
+    {% endif %}
+  </div>
+  <div class="col-md-6">
+    <div style="padding: 10px 30px" class="movie-info">
+      <h1>{{ movie.title }}</h1>
+      <br /><br />
+      <h5>Year: {{ movie.year }}</h5>
+      <h5>Genre: {{ movie.genre }}</h5>
+      <h5>Language: {{ movie.language}}</h5>
+      <h5>Votes: {{ movie.imdb_votes}}</h5>
+      <h5>IMDb Reating: {{ movie.imdb_rating}}</h5>
+      <h5>Length: {{ movie.runtime}}</h5>
+      <a href="/favorite/{{ movie.imdb_id }}"><button type="button" class="btn btn-info">Make Favorite</button></a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="related">
+      <h2>Related Movies</h2>
+    </div>
+  </div>
+  <div class="col-md-12"><hr /></div>
+  <div class="col-md-8">
+    <div>
+      <h3>Synopsis</h3>
+      <p>{{ movie.plot }}</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div>
+      <h3>Director</h3>
+      <p>{{ movie.director }}</p>
+      <div>
+        <div>
+          <h3>Writer</h3>
+          <p>{{ movie.writer }}</p>
+          <div>
+            <div>
+              <h3>Cast</h3>
+              <p>{{ movie.actors }}</p>
+              <div></div>
+            </div>
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+'box_office': '$171,243,005', 'production': 'Scott Rudin Productions, Mike Zoss
+Productions', 'website': 'N/A', 'response': 'True'} 'awards': 'Nominated for 10
+Oscars. Another 37 wins & 159 nominations.', 'released': '22 Dec 2010',
+'runtime': '110 min',

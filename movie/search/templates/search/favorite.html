@@ -1,0 +1,30 @@
+{% extends "base/base.html" %} {% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <h3>My Favorite Movies</h3>
+  </div>
+
+  <div class="row mb-2">
+    {% if not movies %}
+    <h1 style="text-align: center">Nothing Found</h1>
+    {% endif %}
+    {% for movie in movies%}
+    <div class="col-md-3 text-center">
+      <div class="row border rounded m-2">
+        <div class="col p-4 d-flex flex-column">
+          <h3  class="mb-0"><a href="/movie/{{ movie.imdb_id }}">{{ movie.title }}</a></h3>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          {% if movie.poster %}
+          <a href="/movie/{{ movie.imdb_id }}"><img src="{{ movie.poster }}" , width="70%" /></a>
+          {% endif %}
+        </div>
+        <div class="col p-4 d-flex flex-column">
+          <a href="/favorite/{{ movie.imdb_id }}/remove"><button type="button" class="btn btn-info">Remove</button></a>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
