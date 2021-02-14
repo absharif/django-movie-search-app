@@ -13,7 +13,7 @@ Fetures:
  ### 1. Clone this directory
     
  ### 2. Create a Python 3.6 virtualenv
-      <code>virtualenv -p python3.6 env</code>
+      virtualenv -p python3.6 env
  
  ### 3. Install dependencies
       <code>pip install -r requirements.txt</code>
